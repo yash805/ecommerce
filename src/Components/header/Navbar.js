@@ -13,7 +13,7 @@ import Rightheader from './Rightheader';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import LogoutIcon from '@mui/icons-material/Logout';
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector} from "react-redux";
 
 
 
@@ -71,7 +71,7 @@ const Navbar = () => {
 
   useEffect(() => {
     getdetailsvaliduser();
-  }, []);
+  },[]);
 
 
   // for logout
@@ -206,7 +206,7 @@ const Navbar = () => {
         
         <MenuItem onClick={handleClose}>My account</MenuItem>
         {
-          account ? <MenuItem onClick={handleClose} onClick={logoutuser} ><LogoutIcon style={{ fontSize: 16, marginRight: 3 }}/>Logout</MenuItem>:""
+          account ? <MenuItem  onClick={logoutuser} ><LogoutIcon style={{ fontSize: 16, marginRight: 3 }}/>Logout</MenuItem>:""
         }
         
       </Menu>
